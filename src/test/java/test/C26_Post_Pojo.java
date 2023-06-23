@@ -73,9 +73,13 @@ import static io.restassured.RestAssured.given;
 
             assertEquals(expData.getBooking().getFirstname(), respPojo.getBooking().getFirstname() );
             assertEquals(expData.getBooking().getLastname() , respPojo.getBooking().getLastname());
+            assertEquals(expData.getBooking().getTotalprice(),respPojo.getBooking().getTotalprice());
             assertEquals(expData.getBooking().getBookingdates().getCheckin(),
                     respPojo.getBooking().getBookingdates().getCheckin());
+            assertEquals(expData.getBooking().getBookingdates().getCheckout(),
+                    respPojo.getBooking().getBookingdates().getCheckout());
             assertEquals(expData.getBooking().isDepositpaid() , respPojo.getBooking().isDepositpaid());
+            assertEquals(expData.getBooking().getAdditionalneeds(),respPojo.getBooking().getAdditionalneeds());
 
 
 
